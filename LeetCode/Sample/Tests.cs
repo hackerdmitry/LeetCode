@@ -2,6 +2,8 @@
 
 namespace LeetCode.Sample
 {
+    // Array regular expression: (?<=nums\d = \[).*?(?=\])
+
     [TestFixture(TestName = "Sample")]
     public class Tests
     {
