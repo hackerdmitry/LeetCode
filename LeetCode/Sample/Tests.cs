@@ -2,7 +2,7 @@
 
 namespace LeetCode.Sample
 {
-    // Array regular expression: \[((\-?\d+,?)*)\]  ->  new[]{$1}
+    // Array regular expression: \[((\-?\d+,?)+)\]  ->  new[]{$1}
 
     [TestFixture(TestName = "Sample")]
     public class Tests
