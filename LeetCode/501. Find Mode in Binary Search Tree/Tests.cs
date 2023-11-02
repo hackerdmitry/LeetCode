@@ -1,19 +1,21 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using LeetCode.__TreeNode;
 using NUnit.Framework;
 
-namespace LeetCode._515._Find_Largest_Value_in_Each_Tree_Row
+namespace LeetCode._501._Find_Mode_in_Binary_Search_Tree
 {
-    [TestFixture(TestName = "515. Find Largest Value in Each Tree Row")]
+    [TestFixture(TestName = "501. Find Mode in Binary Search Tree")]
     public class Tests
     {
         [Timeout(1000)]
         [TestCaseSource(nameof(Input))]
         public void Test(int?[] input, int[] output)
         {
+            var solution = new Solution();
+
             var treeRoot = TreeNode.CreateFromArray(input);
-            var actual = new Solution().LargestValues(treeRoot);
+            var actual = solution.FindMode(treeRoot);
+
             Assert.AreEqual(output, actual);
         }
 
@@ -21,13 +23,13 @@ namespace LeetCode._515._Find_Largest_Value_in_Each_Tree_Row
         {
             yield return new object[]
             {
-                new int?[]{1,3,2,5,3,null,9},
-                new[]{1,3,9}
+                new int?[]{1,null,2,2},
+                new[]{2}
             };
             yield return new object[]
             {
-                new int?[]{1,2,3},
-                new[]{1,3}
+                new int?[]{0},
+                new[]{0}
             };
         }
     }

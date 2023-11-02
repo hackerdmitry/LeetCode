@@ -1,10 +1,9 @@
-﻿namespace LeetCode.Sample
+﻿namespace LeetCode.Sample;
+
+public class Solution
 {
-    public class Solution
+    public int Sum(int a, int b)
     {
-        public int Sum(int a, int b)
-        {
-            return a + b;
-        }
+        return a + b;
     }
 }
