@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeetCode._1793._Maximum_Score_of_a_Good_Subarray
+namespace LeetCode._3._Hard._1793._Maximum_Score_of_a_Good_Subarray
 {
     public class Solution
     {

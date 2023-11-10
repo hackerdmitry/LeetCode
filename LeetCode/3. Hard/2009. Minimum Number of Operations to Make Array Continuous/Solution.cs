@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Linq;
 
-namespace LeetCode._2009._Minimum_Number_of_Operations_to_Make_Array_Continuous
+namespace LeetCode._3._Hard._2009._Minimum_Number_of_Operations_to_Make_Array_Continuous
 {
     public class Solution
     {

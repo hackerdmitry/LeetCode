@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._458._Poor_Pigs
+namespace LeetCode._3._Hard._458._Poor_Pigs
 {
     [TestFixture(TestName = "458. Poor Pigs")]
     public class Tests

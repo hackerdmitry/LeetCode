@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1095._Find_in_Mountain_Array
+namespace LeetCode._3._Hard._1095._Find_in_Mountain_Array
 {
     [TestFixture(TestName = "1095. Find in Mountain Array")]
     public class Tests

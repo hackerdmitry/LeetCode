@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._2038._Remove_Colored_Pieces_if_Both_Neighbors_are_the_Same_Color
+namespace LeetCode._2._Middle._2038._Remove_Colored_Pieces_if_Both_Neighbors_are_the_Same_Color
 {
     [TestFixture(TestName = "2038. Remove Colored Pieces if Both Neighbors are the Same Color")]
     public class Tests

@@ -1,4 +1,4 @@
-﻿namespace LeetCode._342._Power_of_Four
+﻿namespace LeetCode._1._Easy._342._Power_of_Four
 {
     public class Solution
     {

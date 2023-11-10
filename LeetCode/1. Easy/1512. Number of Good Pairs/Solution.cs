@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LeetCode._1512._Number_of_Good_Pairs
+namespace LeetCode._1._Easy._1512._Number_of_Good_Pairs
 {
     public class Solution
     {

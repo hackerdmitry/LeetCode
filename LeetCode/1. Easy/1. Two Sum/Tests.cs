@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace LeetCode._1._Two_Sum
+namespace LeetCode._1._Easy._1._Two_Sum
 {
     [TestFixture(TestName = "1. Two Sum")]
     public class Tests

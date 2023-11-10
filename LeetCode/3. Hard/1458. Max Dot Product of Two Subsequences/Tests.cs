@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1458._Max_Dot_Product_of_Two_Subsequences
+namespace LeetCode._3._Hard._1458._Max_Dot_Product_of_Two_Subsequences
 {
     [TestFixture(TestName = "1458. Max Dot Product of Two Subsequences")]
     public class Tests

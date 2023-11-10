@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
-namespace LeetCode._389._Find_the_Difference
+namespace LeetCode._1._Easy._389._Find_the_Difference
 {
     public class Solution
     {

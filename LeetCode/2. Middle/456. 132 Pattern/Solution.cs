@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LeetCode._456._132_Pattern
+namespace LeetCode._2._Middle._456._132_Pattern
 {
     public class Solution
     {

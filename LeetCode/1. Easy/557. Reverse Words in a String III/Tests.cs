@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._557._Reverse_Words_in_a_String_III
+namespace LeetCode._1._Easy._557._Reverse_Words_in_a_String_III
 {
     [TestFixture(TestName = "557. Reverse Words in a String III")]
     public class Tests

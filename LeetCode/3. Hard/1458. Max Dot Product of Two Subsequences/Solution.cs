@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeetCode._1458._Max_Dot_Product_of_Two_Subsequences
+namespace LeetCode._3._Hard._1458._Max_Dot_Product_of_Two_Subsequences
 {
     // Построение сетки:
     // "\t" + string.Join("\t", nums1) + Environment.NewLine + string.Join(Environment.NewLine, Enumerable.Range(0, nums2.Length).Select(i => nums2[i] + "\t" + string.Join("\t", Enumerable.Range(0, nums1.Length).Select(j => dp[i, j]))))

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1356._Sort_Integers_by_The_Number_of_1_Bits
+namespace LeetCode._1._Easy._1356._Sort_Integers_by_The_Number_of_1_Bits
 {
     [TestFixture(TestName = "1356. Sort Integers by The Number of 1 Bits")]
     public class Tests

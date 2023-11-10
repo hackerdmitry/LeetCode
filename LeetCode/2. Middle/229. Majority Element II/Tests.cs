@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._229._Majority_Element_II
+namespace LeetCode._2._Middle._229._Majority_Element_II
 {
     [TestFixture(TestName = "229. Majority Element II")]
     public class Tests

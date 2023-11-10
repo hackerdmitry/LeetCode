@@ -2,7 +2,7 @@
 using LeetCode.__TreeNode;
 using NUnit.Framework;
 
-namespace LeetCode._2265._Count_Nodes_Equal_to_Average_of_Subtree;
+namespace LeetCode._2._Middle._2265._Count_Nodes_Equal_to_Average_of_Subtree;
 
 [TestFixture(TestName = "2265. Count Nodes Equal to Average of Subtree")]
 public class Tests

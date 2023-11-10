@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._823._Binary_Trees_With_Factors
+namespace LeetCode._2._Middle._823._Binary_Trees_With_Factors
 {
     [TestFixture(TestName = "823. Binary Trees With Factors")]
     public class Tests

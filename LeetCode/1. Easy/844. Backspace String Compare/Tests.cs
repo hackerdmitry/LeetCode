@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._844._Backspace_String_Compare
+namespace LeetCode._1._Easy._844._Backspace_String_Compare
 {
     [TestFixture(TestName = "844. Backspace String Compare")]
     public class Tests

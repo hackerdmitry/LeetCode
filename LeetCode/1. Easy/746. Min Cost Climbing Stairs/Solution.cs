@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 
-namespace LeetCode._746._Min_Cost_Climbing_Stairs
+namespace LeetCode._1._Easy._746._Min_Cost_Climbing_Stairs
 {
     public class Solution
     {

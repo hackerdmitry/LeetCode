@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace LeetCode._1._Two_Sum
+namespace LeetCode._1._Easy._1._Two_Sum
 {
     public class Solution
     {

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._746._Min_Cost_Climbing_Stairs
+namespace LeetCode._1._Easy._746._Min_Cost_Climbing_Stairs
 {
     [TestFixture(TestName = "746. Min Cost Climbing Stairs")]
     public class Tests

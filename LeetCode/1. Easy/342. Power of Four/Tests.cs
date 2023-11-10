@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._342._Power_of_Four
+namespace LeetCode._1._Easy._342._Power_of_Four
 {
     [TestFixture(TestName = "342. Power of Four")]
     public class Tests

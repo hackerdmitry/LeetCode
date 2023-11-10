@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
-namespace LeetCode._880._Decoded_String_at_Index
+namespace LeetCode._2._Middle._880._Decoded_String_at_Index
 {
     public class Solution
     {

@@ -3,7 +3,7 @@ using System.Collections;
 using LeetCode.Extensions;
 using NUnit.Framework;
 
-namespace LeetCode._1743._Restore_the_Array_From_Adjacent_Pairs;
+namespace LeetCode._2._Middle._1743._Restore_the_Array_From_Adjacent_Pairs;
 
 [TestFixture(TestName = "1743. Restore the Array From Adjacent Pairs")]
 public class Tests

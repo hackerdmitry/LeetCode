@@ -2,7 +2,7 @@
 using System.Linq;
 using LeetCode.__TreeNode;
 
-namespace LeetCode._501._Find_Mode_in_Binary_Search_Tree;
+namespace LeetCode._1._Easy._501._Find_Mode_in_Binary_Search_Tree;
 
 public class Solution
 {

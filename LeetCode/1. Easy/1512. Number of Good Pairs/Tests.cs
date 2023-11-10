@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1512._Number_of_Good_Pairs
+namespace LeetCode._1._Easy._1512._Number_of_Good_Pairs
 {
     [TestFixture(TestName = "1512. Number of Good Pairs")]
     public class Tests

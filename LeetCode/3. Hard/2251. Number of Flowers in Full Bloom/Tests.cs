@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Linq;
-using System.Text.RegularExpressions;
 using LeetCode.Extensions;
 using NUnit.Framework;
 
-namespace LeetCode._2251._Number_of_Flowers_in_Full_Bloom
+namespace LeetCode._3._Hard._2251._Number_of_Flowers_in_Full_Bloom
 {
     [TestFixture(TestName = "2251. Number of Flowers in Full Bloom")]
     public class Tests

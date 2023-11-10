@@ -1,4 +1,4 @@
-﻿namespace LeetCode._896._Monotonic_Array
+﻿namespace LeetCode._1._Easy._896._Monotonic_Array
 {
     public class Solution
     {

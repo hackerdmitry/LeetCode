@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
-namespace LeetCode._2._Add_Two_Numbers
+namespace LeetCode._2._Middle._2._Add_Two_Numbers
 {
     [TestFixture(TestName = "2. Add Two Numbers")]
     public class Tests

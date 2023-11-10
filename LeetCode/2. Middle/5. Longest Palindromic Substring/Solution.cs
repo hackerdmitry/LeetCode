@@ -1,4 +1,4 @@
-﻿namespace LeetCode._5._Longest_Palindromic_Substring
+﻿namespace LeetCode._2._Middle._5._Longest_Palindromic_Substring
 {
     public class Solution
     {

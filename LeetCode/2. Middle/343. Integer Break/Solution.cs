@@ -1,4 +1,4 @@
-﻿namespace LeetCode._343._Integer_Break
+﻿namespace LeetCode._2._Middle._343._Integer_Break
 {
     public class Solution
     {

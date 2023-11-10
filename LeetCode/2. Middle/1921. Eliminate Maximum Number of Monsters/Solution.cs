@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeetCode._1921._Eliminate_Maximum_Number_of_Monsters;
+namespace LeetCode._2._Middle._1921._Eliminate_Maximum_Number_of_Monsters;
 
 public class Solution
 {

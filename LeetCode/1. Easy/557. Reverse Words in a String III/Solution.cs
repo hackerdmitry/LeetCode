@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text;
 
-namespace LeetCode._557._Reverse_Words_in_a_String_III
+namespace LeetCode._1._Easy._557._Reverse_Words_in_a_String_III
 {
     public class Solution
     {

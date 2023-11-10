@@ -1,4 +1,4 @@
-﻿namespace LeetCode._458._Poor_Pigs
+﻿namespace LeetCode._3._Hard._458._Poor_Pigs
 {
     public class Solution
     {

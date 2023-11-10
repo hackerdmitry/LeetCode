@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace LeetCode._905._Sort_Array_By_Parity
+namespace LeetCode._1._Easy._905._Sort_Array_By_Parity
 {
     public class Solution
     {

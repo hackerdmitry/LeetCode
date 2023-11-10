@@ -1,4 +1,4 @@
-﻿namespace LeetCode._21._Merge_Two_Sorted_Lists
+﻿namespace LeetCode._1._Easy._21._Merge_Two_Sorted_Lists
 {
     public class Solution
     {

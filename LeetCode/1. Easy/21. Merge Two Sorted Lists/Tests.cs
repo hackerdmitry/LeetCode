@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
-namespace LeetCode._21._Merge_Two_Sorted_Lists
+namespace LeetCode._1._Easy._21._Merge_Two_Sorted_Lists
 {
     [TestFixture(TestName = "21. Merge Two Sorted Lists")]
     public class Tests

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LeetCode._1441._Build_an_Array_With_Stack_Operations;
+namespace LeetCode._2._Middle._1441._Build_an_Array_With_Stack_Operations;
 
 public class Solution
 {

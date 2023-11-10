@@ -1,4 +1,4 @@
-﻿namespace LeetCode._779._K_th_Symbol_in_Grammar
+﻿namespace LeetCode._2._Middle._779._K_th_Symbol_in_Grammar
 {
     public class Solution
     {

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._905._Sort_Array_By_Parity
+namespace LeetCode._1._Easy._905._Sort_Array_By_Parity
 {
     [TestFixture(TestName = "905. Sort Array By Parity")]
     public class Tests

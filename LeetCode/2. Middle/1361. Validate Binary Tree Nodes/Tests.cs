@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1361._Validate_Binary_Tree_Nodes
+namespace LeetCode._2._Middle._1361._Validate_Binary_Tree_Nodes
 {
     [TestFixture(TestName = "1361. Validate Binary Tree Nodes")]
     public class Tests

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._896._Monotonic_Array
+namespace LeetCode._1._Easy._896._Monotonic_Array
 {
     [TestFixture(TestName = "896. Monotonic Array")]
     public class Tests

@@ -1,4 +1,4 @@
-﻿namespace LeetCode._1759._Count_Number_of_Homogenous_Substrings;
+﻿namespace LeetCode._2._Middle._1759._Count_Number_of_Homogenous_Substrings;
 
 public class Solution
 {

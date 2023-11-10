@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._2433._Find_The_Original_Array_of_Prefix_Xor
+namespace LeetCode._2._Middle._2433._Find_The_Original_Array_of_Prefix_Xor
 {
     [TestFixture(TestName = "2433. Find The Original Array of Prefix Xor")]
     public class Tests

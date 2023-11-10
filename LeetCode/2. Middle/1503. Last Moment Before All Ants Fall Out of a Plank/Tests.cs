@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1503._Last_Moment_Before_All_Ants_Fall_Out_of_a_Plank;
+namespace LeetCode._2._Middle._1503._Last_Moment_Before_All_Ants_Fall_Out_of_a_Plank;
 
 [TestFixture(TestName = "1503. Last Moment Before All Ants Fall Out of a Plank")]
 public class Tests

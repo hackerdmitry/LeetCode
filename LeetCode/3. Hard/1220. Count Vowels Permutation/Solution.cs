@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace LeetCode._1220._Count_Vowels_Permutation
+namespace LeetCode._3._Hard._1220._Count_Vowels_Permutation
 {
     public class Solution
     {

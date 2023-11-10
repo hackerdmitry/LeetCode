@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1441._Build_an_Array_With_Stack_Operations;
+namespace LeetCode._2._Middle._1441._Build_an_Array_With_Stack_Operations;
 
 [TestFixture(TestName = "1441. Build an Array With Stack Operations")]
 public class Tests

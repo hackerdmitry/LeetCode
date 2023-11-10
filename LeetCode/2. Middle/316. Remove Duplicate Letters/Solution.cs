@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace LeetCode._316._Remove_Duplicate_Letters
+namespace LeetCode._2._Middle._316._Remove_Duplicate_Letters
 {
     public class Solution
     {

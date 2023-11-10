@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace LeetCode._1356._Sort_Integers_by_The_Number_of_1_Bits
+namespace LeetCode._1._Easy._1356._Sort_Integers_by_The_Number_of_1_Bits
 {
     public class Solution
     {

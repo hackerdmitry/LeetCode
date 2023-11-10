@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace LeetCode._34._Find_First_and_Last_Position_of_Element_in_Sorted_Array
+namespace LeetCode._2._Middle._34._Find_First_and_Last_Position_of_Element_in_Sorted_Array
 {
     [TestFixture(TestName = "34. Find First and Last Position of Element in Sorted Array")]
     public class Tests

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace LeetCode._823._Binary_Trees_With_Factors
+namespace LeetCode._2._Middle._823._Binary_Trees_With_Factors
 {
     public class Solution
     {

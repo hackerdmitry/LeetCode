@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 
-namespace LeetCode._1269._Number_of_Ways_to_Stay_in_the_Same_Place_After_Some_Steps
+namespace LeetCode._3._Hard._1269._Number_of_Ways_to_Stay_in_the_Same_Place_After_Some_Steps
 {
     public class Solution
     {

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._343._Integer_Break
+namespace LeetCode._2._Middle._343._Integer_Break
 {
     [TestFixture(TestName = "343. Integer Break")]
     public class Tests

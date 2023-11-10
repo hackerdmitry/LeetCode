@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1535._Find_the_Winner_of_an_Array_Game;
+namespace LeetCode._2._Middle._1535._Find_the_Winner_of_an_Array_Game;
 
 [TestFixture(TestName = "1535. Find the Winner of an Array Game")]
 public class Tests

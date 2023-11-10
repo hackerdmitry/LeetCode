@@ -1,4 +1,4 @@
-﻿namespace LeetCode._2._Add_Two_Numbers
+﻿namespace LeetCode._2._Middle._2._Add_Two_Numbers
 {
     public class Solution
     {

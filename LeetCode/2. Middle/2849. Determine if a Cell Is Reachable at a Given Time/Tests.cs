@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._2849._Determine_if_a_Cell_Is_Reachable_at_a_Given_Time;
+namespace LeetCode._2._Middle._2849._Determine_if_a_Cell_Is_Reachable_at_a_Given_Time;
 
 [TestFixture(TestName = "2849. Determine if a Cell Is Reachable at a Given Time")]
 public class Tests

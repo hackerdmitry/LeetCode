@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._119._Pascal_s_Triangle_II
+namespace LeetCode._1._Easy._119._Pascal_s_Triangle_II
 {
     [TestFixture(TestName = "119. Pascal's Triangle II")]
     public class Tests

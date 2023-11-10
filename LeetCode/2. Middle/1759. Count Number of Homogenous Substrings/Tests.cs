@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1759._Count_Number_of_Homogenous_Substrings;
+namespace LeetCode._2._Middle._1759._Count_Number_of_Homogenous_Substrings;
 
 [TestFixture(TestName = "1759. Count Number of Homogenous Substrings")]
 public class Tests

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._779._K_th_Symbol_in_Grammar
+namespace LeetCode._2._Middle._779._K_th_Symbol_in_Grammar
 {
     [TestFixture(TestName = "779. K-th Symbol in Grammar")]
     public class Tests

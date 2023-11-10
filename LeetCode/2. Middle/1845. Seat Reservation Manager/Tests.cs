@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using NUnit.Framework;
 
-namespace LeetCode._1845._Seat_Reservation_Manager;
+namespace LeetCode._2._Middle._1845._Seat_Reservation_Manager;
 
 [TestFixture(TestName = "1845. Seat Reservation Manager")]
 public class Tests

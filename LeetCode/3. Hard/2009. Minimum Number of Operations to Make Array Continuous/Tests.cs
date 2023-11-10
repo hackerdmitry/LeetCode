@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._2009._Minimum_Number_of_Operations_to_Make_Array_Continuous
+namespace LeetCode._3._Hard._2009._Minimum_Number_of_Operations_to_Make_Array_Continuous
 {
     [TestFixture(TestName = "2009. Minimum Number of Operations to Make Array Continuous")]
     public class Tests

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace LeetCode._1361._Validate_Binary_Tree_Nodes
+namespace LeetCode._2._Middle._1361._Validate_Binary_Tree_Nodes
 {
     public class Solution
     {

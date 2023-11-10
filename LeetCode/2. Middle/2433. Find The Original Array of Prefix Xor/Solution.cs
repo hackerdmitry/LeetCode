@@ -1,4 +1,4 @@
-﻿namespace LeetCode._2433._Find_The_Original_Array_of_Prefix_Xor
+﻿namespace LeetCode._2._Middle._2433._Find_The_Original_Array_of_Prefix_Xor
 {
     public class Solution
     {

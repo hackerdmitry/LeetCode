@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._1220._Count_Vowels_Permutation
+namespace LeetCode._3._Hard._1220._Count_Vowels_Permutation
 {
     [TestFixture(TestName = "1220. Count Vowels Permutation")]
     public class Tests

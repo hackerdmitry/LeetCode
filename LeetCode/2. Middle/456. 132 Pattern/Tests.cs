@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using NUnit.Framework;
 
-namespace LeetCode._456._132_Pattern
+namespace LeetCode._2._Middle._456._132_Pattern
 {
     [TestFixture(TestName = "456. 132 Pattern")]
     public class Tests

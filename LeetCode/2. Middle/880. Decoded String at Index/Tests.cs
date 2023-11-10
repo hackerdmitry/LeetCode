@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._880._Decoded_String_at_Index
+namespace LeetCode._2._Middle._880._Decoded_String_at_Index
 {
     [TestFixture(TestName = "880. Decoded String at Index")]
     public class Tests

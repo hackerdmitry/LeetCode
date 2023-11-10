@@ -1,4 +1,4 @@
-﻿namespace LeetCode._844._Backspace_String_Compare
+﻿namespace LeetCode._1._Easy._844._Backspace_String_Compare
 {
     public class Solution
     {
