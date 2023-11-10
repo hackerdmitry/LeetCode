@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Linq;
 using System.Text.RegularExpressions;
+using LeetCode.Extensions;
 using NUnit.Framework;
 
 namespace LeetCode._2251._Number_of_Flowers_in_Full_Bloom
@@ -60,32 +61,11 @@ namespace LeetCode._2251._Number_of_Flowers_in_Full_Bloom
             foreach (var testCase in testCases)
             {
                 var lines = testCase.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-                var input1 = ParseIntArray2d(lines[0]);
-                var input2 = ParseIntArray(lines[1]);
-                var output = ParseIntArray(lines[2]);
+                var input1 = lines[0].ParseIntArray2d();
+                var input2 = lines[1].ParseIntArray();
+                var output = lines[2].ParseIntArray();
                 yield return new object[] { input1, input2, output };
             }
-        }
-
-        private static int[][] ParseIntArray2d(string line)
-        {
-            var matches = Regex.Matches(line, @"(?<=\[)((\-?\d+,?)+)(?=\])");
-            return matches
-                .Select(x => x
-                    .Value
-                    .Split(',')
-                    .Select(y => int.Parse(y.Trim()))
-                    .ToArray())
-                .ToArray();
-        }
-
-        private static int[] ParseIntArray(string line)
-        {
-            var array = line.TrimStart('[').TrimEnd(']');
-            return array
-                .Split(',')
-                .Select(x => int.Parse(x.Trim()))
-                .ToArray();
         }
     }
 }

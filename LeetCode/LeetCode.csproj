@@ -16,9 +16,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="456. 132 Pattern\LongInput.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+      <Folder Include="1. Easy\" />
+      <Folder Include="3. Hard\" />
+      <Folder Include="2. Middle\" />
     </ItemGroup>
 
 </Project>
