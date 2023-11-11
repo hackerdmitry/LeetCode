@@ -25,4 +25,23 @@ public static class ParserExtensions
             .Select(x => int.Parse(x.Trim()))
             .ToArray();
     }
+
+    public static int?[] ParseNullIntArray(this string line)
+    {
+        var array = line.TrimStart('[').TrimEnd(']');
+        return array
+            .Split(',')
+            .Select(x => x.Trim())
+            .Select(x => x == "null" ? (int?)null : int.Parse(x))
+            .ToArray();
+    }
+
+    public static string[] ParseStringArray(this string line)
+    {
+        var array = line.TrimStart('[').TrimEnd(']');
+        return array
+            .Split(',')
+            .Select(x => x.Trim())
+            .ToArray();
+    }
 }
