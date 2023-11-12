@@ -25,42 +25,25 @@ public class Tests
                     var startPosSecondArg = input2[i].IndexOf('[', 1);
                     var args = input2[i].Substring(startPosSecondArg, input2[i].Length - 1 - startPosSecondArg).ParseIntArray2d();
                     graph = new Graph(args.Length, args);
-//                    Assert.AreEqual(output[i], null);
+                    Assert.AreEqual(output[i], null);
                     break;
                 }
                 case "shortestPath":
                 {
                     var args = input2[i].ParseIntArray();
                     var length = graph.ShortestPath(args[0], args[1]);
-//                    Assert.AreEqual(output[i], length);
+                    Assert.AreEqual(output[i], length);
                     break;
                 }
                 case "addEdge":
                 {
                     var args = input2[i].ParseIntArray();
                     graph.AddEdge(args);
-//                    Assert.AreEqual(output[i], null);
+                    Assert.AreEqual(output[i], null);
                     break;
                 }
             }
         }
-
-        //        var graph = new Graph(4, new[]
-//        {
-//            new[] { 0, 2, 5 },
-//            new[] { 0, 1, 2 },
-//            new[] { 1, 2, 1 },
-//            new[] { 3, 0, 3 },
-//        });
-//        var sp1 = graph.ShortestPath(3, 2);
-//        Assert.AreEqual(6, sp1);
-//        var sp2 = graph.ShortestPath(0, 3);
-//        Assert.AreEqual(-1, sp2);
-//
-//        graph.AddEdge(new[] { 1, 3, 4 });
-//
-//        var sp3 = graph.ShortestPath(0, 3);
-//        Assert.AreEqual(6, sp3);
     }
 
     private static IEnumerable Input()

@@ -5,6 +5,11 @@ namespace LeetCode.Extensions;
 
 public static class ParserExtensions
 {
+    public static int ParseInt(this string line)
+    {
+        return int.Parse(line);
+    }
+
     public static int[][] ParseIntArray2d(this string line)
     {
         var matches = Regex.Matches(line, @"(?<=\[)((\-?\d+,?)+)(?=\])");
