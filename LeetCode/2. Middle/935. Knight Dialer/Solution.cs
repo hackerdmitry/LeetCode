@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LeetCode._935._Knight_Dialer;
+namespace LeetCode._2._Middle._935._Knight_Dialer;
 
 public class Solution
 {

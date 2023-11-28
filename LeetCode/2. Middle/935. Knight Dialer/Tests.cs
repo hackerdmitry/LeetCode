@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace LeetCode._935._Knight_Dialer;
+namespace LeetCode._2._Middle._935._Knight_Dialer;
 
 [TestFixture(TestName = "935. Knight Dialer")]
 public class Tests
