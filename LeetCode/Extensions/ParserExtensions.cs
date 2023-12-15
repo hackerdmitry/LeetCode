@@ -22,6 +22,18 @@ public static class ParserExtensions
             .ToArray();
     }
 
+    public static string[][] ParseStringArray2d(this string line)
+    {
+        var matches = Regex.Matches(line, @"(?<=\[)((""[^""]*?"",?)+)(?=\])");
+        return matches
+            .Select(x => x
+                .Value
+                .Split(',')
+                .Select(y => y.Trim().Trim('"'))
+                .ToArray())
+            .ToArray();
+    }
+
     public static int[] ParseIntArray(this string line)
     {
         var array = line.TrimStart('[').TrimEnd(']');
