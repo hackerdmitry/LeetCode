@@ -45,4 +45,9 @@ public class TreeNode
 
         return treeRoot;
     }
+
+    public override string ToString()
+    {
+        return val.ToString();
+    }
 }
