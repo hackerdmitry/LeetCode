@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace LeetCode.Extensions;
@@ -12,13 +13,14 @@ public static class ParserExtensions
 
     public static int[][] ParseIntArray2d(this string line)
     {
-        var matches = Regex.Matches(line, @"(?<=\[)((\-?\d+,?)+)(?=\])");
+        var matches = Regex.Matches(line, @"(?<=\[)((\-?\d+,?)*)(?=\])");
         return matches
-            .Select(x => x
-                .Value
-                .Split(',')
-                .Select(y => int.Parse(y.Trim()))
-                .ToArray())
+            .Select(x => x.Value.Trim())
+            .Select(x => x == string.Empty
+                ? Array.Empty<int>()
+                : x.Split(',')
+                    .Select(y => int.Parse(y.Trim()))
+                    .ToArray())
             .ToArray();
     }
 
@@ -49,7 +51,7 @@ public static class ParserExtensions
         return array
             .Split(',')
             .Select(x => x.Trim())
-            .Select(x => x == "null" ? (int?)null : int.Parse(x))
+            .Select(x => x == "null" ? (int?) null : int.Parse(x))
             .ToArray();
     }
 
