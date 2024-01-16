@@ -17,7 +17,6 @@
 
     <ItemGroup>
       <Folder Include="1. Easy\" />
-      <Folder Include="2. Middle\" />
     </ItemGroup>
 
 </Project>
