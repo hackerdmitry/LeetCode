@@ -1,4 +1,6 @@
-﻿namespace LeetCode.__Additional;
+﻿using System.Collections.Generic;
+
+namespace LeetCode.__Additional;
 
 public class ListNode
 {
@@ -25,5 +27,18 @@ public class ListNode
         }
 
         return head;
+    }
+
+    public int[] ToArray()
+    {
+        var node = this;
+        var result = new List<int>();
+        while (node != null)
+        {
+            result.Add(node.val);
+            node = node.next;
+        }
+
+        return result.ToArray();
     }
 }
