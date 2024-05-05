@@ -1,4 +1,6 @@
-﻿namespace LeetCode._1._Easy._21._Merge_Two_Sorted_Lists
+﻿using LeetCode.__Additional;
+
+namespace LeetCode._1._Easy._21._Merge_Two_Sorted_Lists
 {
     public class Solution
     {
@@ -7,7 +9,7 @@
             var elem1 = list1;
             var elem2 = list2;
 
-            var reversedResult = (ListNode)null;
+            var reversedResult = (ListNode) null;
             while (elem1 != null || elem2 != null)
             {
                 if (elem1 == null)

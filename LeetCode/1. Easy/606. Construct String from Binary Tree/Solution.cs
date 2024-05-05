@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 
 namespace LeetCode._1._Easy._606._Construct_String_from_Binary_Tree;
 

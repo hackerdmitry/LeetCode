@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._1._Easy._938._Range_Sum_of_BST;
@@ -21,12 +21,12 @@ public class Tests
     {
         yield return new object[]
         {
-            new int?[]{10,5,15,3,7,null,18}, 7, 15,
+            new int?[] {10, 5, 15, 3, 7, null, 18}, 7, 15,
             32,
         };
         yield return new object[]
         {
-            new int?[]{10,5,15,3,7,13,18,1,null,6}, 6, 10,
+            new int?[] {10, 5, 15, 3, 7, 13, 18, 1, null, 6}, 6, 10,
             23,
         };
     }

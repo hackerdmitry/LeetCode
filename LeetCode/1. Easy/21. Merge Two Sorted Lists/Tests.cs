@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._1._Easy._21._Merge_Two_Sorted_Lists
@@ -14,12 +14,10 @@ namespace LeetCode._1._Easy._21._Merge_Two_Sorted_Lists
         [TestCase(new int[0], new[] {0}, new[] {0})]
         public void Test(int[] input1, int[] input2, int[] output)
         {
-            var solution = new Solution();
+            var list1 = ListNode.CreateFromArray(input1);
+            var list2 = ListNode.CreateFromArray(input2);
 
-            var list1 = input1.Reverse().Aggregate((ListNode) null, (nextNode, curValue) => new ListNode(curValue, nextNode));
-            var list2 = input2.Reverse().Aggregate((ListNode) null, (nextNode, curValue) => new ListNode(curValue, nextNode));
-
-            var result = solution.MergeTwoLists(list1, list2);
+            var result = new Solution().MergeTwoLists(list1, list2);
 
             var actual = new List<int>();
             while (result != null)

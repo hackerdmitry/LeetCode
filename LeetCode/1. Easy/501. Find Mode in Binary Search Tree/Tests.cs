@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._1._Easy._501._Find_Mode_in_Binary_Search_Tree
@@ -23,13 +23,13 @@ namespace LeetCode._1._Easy._501._Find_Mode_in_Binary_Search_Tree
         {
             yield return new object[]
             {
-                new int?[]{1,null,2,2},
-                new[]{2}
+                new int?[] {1, null, 2, 2},
+                new[] {2}
             };
             yield return new object[]
             {
-                new int?[]{0},
-                new[]{0}
+                new int?[] {0},
+                new[] {0}
             };
         }
     }

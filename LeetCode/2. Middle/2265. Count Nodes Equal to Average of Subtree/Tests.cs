@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._2._Middle._2265._Count_Nodes_Equal_to_Average_of_Subtree;
@@ -21,12 +21,12 @@ public class Tests
     {
         yield return new object[]
         {
-            new int?[]{4,8,5,0,1,null,6},
+            new int?[] {4, 8, 5, 0, 1, null, 6},
             5
         };
         yield return new object[]
         {
-            new int?[]{1},
+            new int?[] {1},
             1
         };
     }

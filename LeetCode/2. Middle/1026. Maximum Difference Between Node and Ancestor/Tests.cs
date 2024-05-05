@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._2._Middle._1026._Maximum_Difference_Between_Node_and_Ancestor;
@@ -23,12 +23,12 @@ public class Tests
     {
         yield return new object[]
         {
-            new int?[]{8,3,10,1,6,null,14,null,null,4,7,13},
+            new int?[] {8, 3, 10, 1, 6, null, 14, null, null, 4, 7, 13},
             7,
         };
         yield return new object[]
         {
-            new int?[]{1,null,2,null,0,3},
+            new int?[] {1, null, 2, null, 0, 3},
             3,
         };
     }

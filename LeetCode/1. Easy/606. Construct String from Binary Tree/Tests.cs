@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._1._Easy._606._Construct_String_from_Binary_Tree;
@@ -23,12 +23,12 @@ public class Tests
     {
         yield return new object[]
         {
-            new int?[]{1,2,3,4},
+            new int?[] {1, 2, 3, 4},
             "1(2(4))(3)",
         };
         yield return new object[]
         {
-            new int?[]{1,2,3,null,4},
+            new int?[] {1, 2, 3, null, 4},
             "1(2()(4))(3)",
         };
     }

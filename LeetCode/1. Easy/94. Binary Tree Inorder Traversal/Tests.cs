@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._1._Easy._94._Binary_Tree_Inorder_Traversal;
@@ -26,8 +26,8 @@ public class Tests
     {
         yield return new object[]
         {
-            new int?[]{1,null,2,3},
-            new[]{1,3,2}
+            new int?[] {1, null, 2, 3},
+            new[] {1, 3, 2}
         };
         yield return new object[]
         {
@@ -36,13 +36,13 @@ public class Tests
         };
         yield return new object[]
         {
-            new int?[]{1},
-            new[]{1}
+            new int?[] {1},
+            new[] {1}
         };
         yield return new object[]
         {
-            new int?[]{3,1,2},
-            new[]{1,3,2}
+            new int?[] {3, 1, 2},
+            new[] {1, 3, 2}
         };
     }
 }

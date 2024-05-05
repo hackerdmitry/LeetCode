@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 
 namespace LeetCode._1._Easy._872._Leaf_Similar_Trees;
 

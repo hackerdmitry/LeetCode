@@ -1,4 +1,4 @@
-﻿using LeetCode.__TreeNode;
+﻿using LeetCode.__Additional;
 
 namespace LeetCode._2._Middle._2265._Count_Nodes_Equal_to_Average_of_Subtree;
 

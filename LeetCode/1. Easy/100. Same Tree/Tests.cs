@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using LeetCode.__TreeNode;
+using LeetCode.__Additional;
 using NUnit.Framework;
 
 namespace LeetCode._1._Easy._100._Same_Tree;
@@ -24,26 +24,26 @@ public class Tests
     {
         yield return new object[]
         {
-            new int?[]{1,2,3},
-            new int?[]{1,2,3},
+            new int?[] {1, 2, 3},
+            new int?[] {1, 2, 3},
             true,
         };
         yield return new object[]
         {
-            new int?[]{1,2},
-            new int?[]{1,null,2},
+            new int?[] {1, 2},
+            new int?[] {1, null, 2},
             false,
         };
         yield return new object[]
         {
-            new int?[]{1,2,1},
-            new int?[]{1,1,2},
+            new int?[] {1, 2, 1},
+            new int?[] {1, 1, 2},
             false,
         };
         yield return new object[]
         {
-            new int?[]{1},
-            new int?[]{1,null,2},
+            new int?[] {1},
+            new int?[] {1, null, 2},
             false,
         };
     }

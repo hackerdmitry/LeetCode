@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LeetCode.__TreeNode;
+namespace LeetCode.__Additional;
 
 public class TreeNode
 {
