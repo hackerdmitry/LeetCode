@@ -50,4 +50,9 @@ public class TreeNode
     {
         return val.ToString();
     }
+
+    public static implicit operator TreeNode(int?[] array)
+    {
+        return CreateFromArray(array);
+    }
 }

@@ -41,4 +41,9 @@ public class ListNode
 
         return result.ToArray();
     }
+
+    public static implicit operator ListNode(int[] array)
+    {
+        return CreateFromArray(array);
+    }
 }
