@@ -58,9 +58,12 @@ public static class ParserExtensions
     public static string[] ParseStringArray(this string line)
     {
         var array = line.TrimStart('[').TrimEnd(']');
+        if (array == string.Empty)
+            return Array.Empty<string>();
+
         return array
             .Split(',')
-            .Select(x => x.Trim())
+            .Select(x => x.Trim(' ', '"'))
             .ToArray();
     }
 }

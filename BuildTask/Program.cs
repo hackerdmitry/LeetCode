@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -32,12 +33,18 @@ public static class Program
 
         var folderFactory = new FolderFactory(taskData);
         var taskFolderPath = folderFactory.CreateTaskFolderPath();
-        var taskFileWriter = folderFactory.CreateTaskFile(taskFolderPath);
-        builder.BuildTaskFile(taskFileWriter);
-        await taskFileWriter.DisposeAsync();
-        var testsFileWriter = folderFactory.CreateTestsFile(taskFolderPath);
-        builder.BuildTestsFile(testsFileWriter);
-        await testsFileWriter.DisposeAsync();
+        try
+        {
+            await using var taskFileWriter = folderFactory.CreateTaskFile(taskFolderPath);
+            builder.BuildTaskFile(taskFileWriter);
+            await using var testsFileWriter = folderFactory.CreateTestsFile(taskFolderPath);
+            builder.BuildTestsFile(testsFileWriter);
+        }
+        catch
+        {
+            Directory.Delete(taskFolderPath, true);
+            throw;
+        }
 
         // builder.BuildTaskFile(Console.Out);
         // builder.BuildTestsFile(Console.Out);
@@ -79,6 +86,7 @@ public static class Program
     private static VariableInfo TransformType(string type, string name)
     {
         type = type.Replace("integer", "int");
+        // type = Regex.Replace(type, @"list<(\w+)>", "$1[]");
 
         return new VariableInfo
         {

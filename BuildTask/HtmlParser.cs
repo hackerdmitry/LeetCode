@@ -22,6 +22,14 @@ public class HtmlParser
         var examplesCount = inputExamples.Length;
         taskData.ExamplesCount = examplesCount;
 
+        string HandleExample(string example)
+        {
+            var result = example.Replace("&quot;", "\\\"");
+            if (result.StartsWith("\\\"") && result.StartsWith("\\\""))
+                result = result.Substring(2, result.Length - 4);
+            return result;
+        }
+
         for (var i = 0; i < examplesCount; i++)
         {
             for (var j = 0; j < taskData.Params.Length; j++)
@@ -29,12 +37,12 @@ public class HtmlParser
                 var taskDataParam = taskData.Params[j];
                 if (i == 0)
                     taskDataParam.Examples = new string[examplesCount];
-                taskDataParam.Examples[i] = inputExamples[i][j].Split(" = ")[1].Replace("&quot;", "\"").Trim('"');
+                taskDataParam.Examples[i] = HandleExample(inputExamples[i][j].Split(" = ")[1]);
             }
 
             if (i == 0)
                 taskData.Return.Examples = new string[examplesCount];
-            taskData.Return.Examples[i] = outputExamples[i].Trim();
+            taskData.Return.Examples[i] = HandleExample(outputExamples[i].Trim());
         }
     }
 }

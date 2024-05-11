@@ -19,10 +19,11 @@ public class Builder
 
     private readonly Dictionary<string, Func<string, string>> parseFunctions = new()
     {
-        ["string[]"] = name => $"ParseStringArray({name})",
-        ["string[][]"] = name => $"ParseStringArray2d({name})",
-        ["int[]"] = name => $"ParseIntArray({name})",
-        ["int[][]"] = name => $"ParseIntArray2d({name})",
+        ["string[]"] = name => $"{name}.ParseStringArray()",
+        ["list<string>"] = name => $"{name}.ParseStringArray()",
+        ["string[][]"] = name => $"{name}.ParseStringArray2d()",
+        ["int[]"] = name => $"{name}.ParseIntArray()",
+        ["int[][]"] = name => $"{name}.ParseIntArray2d()",
     };
 
     private readonly TaskData taskData;
@@ -54,6 +55,7 @@ public class Builder
     {
         var typesUsed = new List<string>(taskData.Params.Select(x => x.Type)) {taskData.Return.Type}
             .Select(x => x.Replace("[]", string.Empty).Replace("[,]", string.Empty))
+            .Select(x => Regex.Replace(x, @"list<\w+>", "IList"))
             .ToHashSet();
 
         foreach (var type in typesWithoutLibraries)
