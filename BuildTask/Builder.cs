@@ -41,7 +41,11 @@ public class Builder
 
     public void BuildTestsFile(TextWriter writer)
     {
-        AppendUsings(writer, new[] {"NUnit.Framework", "LeetCode.Extensions"});
+        var additionalUsings = new List<string> {"NUnit.Framework"};
+        if (taskData.Params.Any(x => parseFunctions.ContainsKey(x.Type)) || parseFunctions.ContainsKey(taskData.Return.Type))
+            additionalUsings.Add("LeetCode.Extensions");
+
+        AppendUsings(writer, additionalUsings.ToArray());
         AppendNamespaceLine(writer);
         AppendTestsCodeSnippet(writer);
     }
