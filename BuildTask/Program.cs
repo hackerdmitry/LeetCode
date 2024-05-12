@@ -64,6 +64,7 @@ public static class Program
         if (codeSnippet == null)
             throw new Exception("Code snippet for C# is not found");
         taskData.SampleCodeSnippet = Regex.Replace(codeSnippet.Code, @" {\n(    )( *)", "\n$2{\n$1");
+        taskData.SampleCodeSnippet = Regex.Replace(taskData.SampleCodeSnippet, @"\/\*.*\*\/\n", string.Empty, RegexOptions.Singleline);
     }
 
     private static async Task FillTestData(string titleSlug, TaskData taskData)

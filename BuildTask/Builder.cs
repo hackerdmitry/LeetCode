@@ -24,6 +24,8 @@ public class Builder
         ["string[][]"] = name => $"{name}.ParseStringArray2d()",
         ["int[]"] = name => $"{name}.ParseIntArray()",
         ["int[][]"] = name => $"{name}.ParseIntArray2d()",
+        ["ListNode"] = name => $"{name}.ParseIntArray()",
+        ["TreeNode"] = name => $"{name}.ParseNullIntArray()",
     };
 
     private readonly TaskData taskData;
