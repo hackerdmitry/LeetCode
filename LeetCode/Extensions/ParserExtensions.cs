@@ -13,6 +13,9 @@ public static class ParserExtensions
 
     public static int[][] ParseIntArray2d(this string line)
     {
+        if (line == "[]")
+            return Array.Empty<int[]>();
+
         var matches = Regex.Matches(line, @"(?<=\[)((\-?\d+,?)*)(?=\])");
         return matches
             .Select(x => x.Value.Trim())

@@ -22,8 +22,11 @@ public class Builder
         ["string[]"] = name => $"{name}.ParseStringArray()",
         ["list<string>"] = name => $"{name}.ParseStringArray()",
         ["string[][]"] = name => $"{name}.ParseStringArray2d()",
+        ["list<list<string>>"] = name => $"{name}.ParseStringArray2d()",
         ["int[]"] = name => $"{name}.ParseIntArray()",
+        ["list<int>"] = name => $"{name}.ParseIntArray()",
         ["int[][]"] = name => $"{name}.ParseIntArray2d()",
+        ["list<list<int>>"] = name => $"{name}.ParseIntArray2d()",
         ["ListNode"] = name => $"{name}.ParseIntArray()",
         ["TreeNode"] = name => $"{name}.ParseNullIntArray()",
     };
@@ -57,7 +60,7 @@ public class Builder
     {
         var typesUsed = new List<string>(taskData.Params.Select(x => x.Type)) {taskData.Return.Type}
             .Select(x => x.Replace("[]", string.Empty).Replace("[,]", string.Empty))
-            .Select(x => Regex.Replace(x, @"list<\w+>", "IList"))
+            .Select(x => Regex.Replace(x, @"^list<.+>$", "IList"))
             .ToHashSet();
 
         foreach (var type in typesWithoutLibraries)

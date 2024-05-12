@@ -1,19 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LeetCode.Extensions;
 
 public static class WriteLineExtensions
 {
-    public static void WriteLine<T>(this T[] array, string prefix = null, Func<T, string> writeLineFunc = null)
+    public static void WriteLine<T>(this IList<T> array, string prefix = null, Func<T, string> writeLineFunc = null)
     {
         Console.WriteLine(
             HandlePrefix(prefix) +
-            $"[{string.Join(", ", writeLineFunc != null ? array.Select(writeLineFunc) : array)}]"
+            $"[{(writeLineFunc != null ? string.Join(", ", array.Select(writeLineFunc)) : string.Join(", ", array))}]"
         );
     }
 
-    public static void WriteLine<T>(this T[][] multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null)
+    public static void WriteLine<T>(this IList<IList<T>> multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null)
     {
         Console.WriteLine(HandlePrefix(prefix));
         foreach (var array in multidimensionalArray)
