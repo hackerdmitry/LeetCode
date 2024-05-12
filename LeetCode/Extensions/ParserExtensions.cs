@@ -41,6 +41,9 @@ public static class ParserExtensions
 
     public static int[] ParseIntArray(this string line)
     {
+        if (line == "[]")
+            return Array.Empty<int>();
+
         var array = line.TrimStart('[').TrimEnd(']');
         return array
             .Split(',')

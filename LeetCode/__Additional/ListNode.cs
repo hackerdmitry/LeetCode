@@ -29,9 +29,16 @@ public class ListNode
         return head;
     }
 
-    public int[] ToArray()
+    public static implicit operator ListNode(int[] array)
     {
-        var node = this;
+        return CreateFromArray(array);
+    }
+}
+
+public static class LinkNodeExtensions
+{
+    public static int[] ToArray(this ListNode node)
+    {
         var result = new List<int>();
         while (node != null)
         {
@@ -40,10 +47,5 @@ public class ListNode
         }
 
         return result.ToArray();
-    }
-
-    public static implicit operator ListNode(int[] array)
-    {
-        return CreateFromArray(array);
     }
 }
