@@ -13,11 +13,11 @@ public class HtmlParser
 
         var inputExamples = doc.DocumentNode
             .SelectNodes("//strong[text() = 'Input:']")
-            .Select(x => x.NextSibling.InnerText.Trim().Split(", "))
+            .Select(x => x.ParentNode.LastChild.InnerText.Trim().Split(", "))
             .ToArray();
         var outputExamples = doc.DocumentNode
             .SelectNodes("//strong[text() = 'Output:']")
-            .Select(x => x.NextSibling.InnerText)
+            .Select(x => x.ParentNode.LastChild.InnerText)
             .ToArray();
         var examplesCount = inputExamples.Length;
         taskData.ExamplesCount = examplesCount;
