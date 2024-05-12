@@ -16,7 +16,7 @@ public class Tests
         var solution = new Solution();
         var actual = solution.ThreeSum(input.ParseIntArray());
         var output = outputStr.ParseIntArray2d();
-        output.WriteLine<int>("expected");
+        output.WriteLine("expected");
         actual.WriteLine("actual");
         Assert.AreEqual(output, actual);
     }

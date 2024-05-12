@@ -6,19 +6,22 @@ namespace LeetCode.Extensions;
 
 public static class WriteLineExtensions
 {
+    public static void WriteLine<T>(this IList<IList<T>> multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null)
+    {
+        Console.WriteLine(HandlePrefix(prefix));
+        foreach (var array in multidimensionalArray)
+            array.WriteLine(writeLineFunc: writeLineFunc);
+    }
+
+    public static void WriteLine<T>(this T[][] multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null) =>
+        ((IList<IList<T>>) multidimensionalArray).WriteLine(prefix, writeLineFunc);
+
     public static void WriteLine<T>(this IList<T> array, string prefix = null, Func<T, string> writeLineFunc = null)
     {
         Console.WriteLine(
             HandlePrefix(prefix) +
             $"[{(writeLineFunc != null ? string.Join(", ", array.Select(writeLineFunc)) : string.Join(", ", array))}]"
         );
-    }
-
-    public static void WriteLine<T>(this IList<IList<T>> multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null)
-    {
-        Console.WriteLine(HandlePrefix(prefix));
-        foreach (var array in multidimensionalArray)
-            array.WriteLine(writeLineFunc: writeLineFunc);
     }
 
     public static void WriteLine<T>(this T[,] matrixArray, string prefix = null, Func<T, string> writeLineFunc = null)
