@@ -11,13 +11,21 @@ public class HtmlParser
         var doc = new HtmlDocument();
         doc.LoadHtml(html);
 
+        string GetExampleText(HtmlNode htmlNode)
+        {
+            return htmlNode.ParentNode.Name == "pre"
+                ? htmlNode.NextSibling.InnerText
+                : htmlNode.ParentNode.LastChild.InnerText;
+        }
+
         var inputExamples = doc.DocumentNode
             .SelectNodes("//strong[text() = 'Input:']")
-            .Select(x => x.ParentNode.LastChild.InnerText.Trim().Split(", "))
+            .Select(GetExampleText)
+            .Select(x => x.Trim().Split(", "))
             .ToArray();
         var outputExamples = doc.DocumentNode
             .SelectNodes("//strong[text() = 'Output:']")
-            .Select(x => x.ParentNode.LastChild.InnerText)
+            .Select(GetExampleText)
             .ToArray();
         var examplesCount = inputExamples.Length;
         taskData.ExamplesCount = examplesCount;
