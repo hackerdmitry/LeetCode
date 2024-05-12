@@ -32,7 +32,7 @@ public class HtmlParser
 
         string HandleExample(string example)
         {
-            var result = example.Replace("&quot;", "\\\"");
+            var result = example.Replace("\"", "\\\"").Replace("&quot;", "\\\"");
             if (result.StartsWith("\\\"") && result.StartsWith("\\\""))
                 result = result.Substring(2, result.Length - 4);
             return result;
