@@ -10,7 +10,7 @@ namespace BuildTask;
 
 public class Builder
 {
-    private readonly string[] typesWithoutLibraries = {"int", "double", "string"};
+    private readonly string[] typesWithoutLibraries = {"int", "double", "string", "char", "bool"};
     private readonly SortedDictionary<string, string[]> libraryTypes = new()
     {
         ["System.Collections.Generic"] = new[] {"IList"},

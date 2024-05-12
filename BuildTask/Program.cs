@@ -87,8 +87,10 @@ public static class Program
 
     private static VariableInfo TransformType(string type, string name)
     {
-        type = type.Replace("integer", "int");
-        // type = Regex.Replace(type, @"list<(\w+)>", "$1[]");
+        type = type
+            .Replace("integer", "int")
+            .Replace("character", "char")
+            .Replace("boolean", "bool");
 
         return new VariableInfo
         {

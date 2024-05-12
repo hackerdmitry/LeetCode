@@ -39,6 +39,18 @@ public static class ParserExtensions
             .ToArray();
     }
 
+    public static char[][] ParseCharArray2d(this string line)
+    {
+        var matches = Regex.Matches(line, @"(?<=\[)(('[^']*?',?)+)(?=\])");
+        return matches
+            .Select(x => x
+                .Value
+                .Split(',')
+                .Select(y => char.Parse(y.Trim().Trim('\'')))
+                .ToArray())
+            .ToArray();
+    }
+
     public static int[] ParseIntArray(this string line)
     {
         if (line == "[]")
