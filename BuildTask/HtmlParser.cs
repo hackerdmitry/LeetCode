@@ -19,12 +19,12 @@ public class HtmlParser
         }
 
         var inputExamples = doc.DocumentNode
-            .SelectNodes("//strong[text() = 'Input:']")
+            .SelectNodes("//strong[contains(text(), 'Input')]")
             .Select(GetExampleText)
             .Select(x => x.Trim().Split(", "))
             .ToArray();
         var outputExamples = doc.DocumentNode
-            .SelectNodes("//strong[text() = 'Output:']")
+            .SelectNodes("//strong[contains(text(), 'Output')]")
             .Select(GetExampleText)
             .ToArray();
         var examplesCount = inputExamples.Length;
