@@ -65,6 +65,9 @@ public static class ParserExtensions
 
     public static int?[] ParseNullIntArray(this string line)
     {
+        if (line == "[]")
+            return Array.Empty<int?>();
+
         var array = line.TrimStart('[').TrimEnd(']');
         return array
             .Split(',')

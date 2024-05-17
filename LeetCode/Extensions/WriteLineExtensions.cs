@@ -14,14 +14,14 @@ public static class WriteLineExtensions
     }
 
     public static void WriteLine<T>(this T[][] multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null) =>
-        ((IList<IList<T>>) multidimensionalArray).WriteLine(prefix, writeLineFunc);
+        ((IList<IList<T>>)multidimensionalArray).WriteLine(prefix, writeLineFunc);
 
     public static void WriteLine<T>(this IList<T> array, string prefix = null, Func<T, string> writeLineFunc = null)
     {
-        Console.WriteLine(
-            HandlePrefix(prefix) +
-            $"[{(writeLineFunc != null ? string.Join(", ", array.Select(writeLineFunc)) : string.Join(", ", array))}]"
-        );
+        var list = writeLineFunc != null
+            ? array.Select(writeLineFunc).Select(ObjectifyNullOrEmpty)
+            : array.Select(ObjectifyNullOrEmpty);
+        Console.WriteLine(HandlePrefix(prefix) + $"[{string.Join(", ", list)}]");
     }
 
     public static void WriteLine<T>(this T[,] matrixArray, string prefix = null, Func<T, string> writeLineFunc = null)
@@ -34,4 +34,16 @@ public static class WriteLineExtensions
     }
 
     private static string HandlePrefix(string prefix) => prefix == null ? null : prefix + ": ";
+
+    private static string ObjectifyNullOrEmpty<T>(T value)
+    {
+        if (value == null)
+            return "null";
+
+        var str = value as string ?? value.ToString();
+        if (str == string.Empty)
+            return "empty";
+
+        return str;
+    }
 }

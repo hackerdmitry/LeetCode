@@ -56,3 +56,32 @@ public class TreeNode
         return CreateFromArray(array);
     }
 }
+
+public static class TreeNodeExtensions
+{
+    public static int?[] ToArray(this TreeNode treeNode)
+    {
+        var list = new List<int?>();
+        if (treeNode != null)
+        {
+            list.Add(treeNode.val);
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(treeNode);
+            while (queue.Count > 0)
+            {
+                var node = queue.Dequeue();
+                if (node.left != null || node.right != null)
+                {
+                    list.Add(node.left?.val);
+                    if (node.left != null)
+                        queue.Enqueue(node.left);
+                    list.Add(node.right?.val);
+                    if (node.right != null)
+                        queue.Enqueue(node.right);
+                }
+            }
+        }
+
+        return list.ToArray();
+    }
+}
