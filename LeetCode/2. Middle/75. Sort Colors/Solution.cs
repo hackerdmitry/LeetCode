@@ -4,9 +4,13 @@ public class Solution
 {
     public void SortColors(int[] nums)
     {
-        for (var i = 0; i < nums.Length; i++)
-            for (var j = i + 1; j < nums.Length; j++)
-                if (nums[i] > nums[j])
-                    (nums[i], nums[j]) = (nums[j], nums[i]);
+        var colors = new int[3];
+        foreach (var num in nums)
+            colors[num]++;
+
+        var i = 0;
+        for (var j = 0; j < colors.Length; j++)
+            while (colors[j]-- != 0)
+                nums[i++] = j;
     }
 }
