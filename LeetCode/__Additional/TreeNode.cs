@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LeetCode.__Additional;
 
@@ -82,6 +84,7 @@ public static class TreeNodeExtensions
             }
         }
 
-        return list.ToArray();
+        var countLastNulls = ((IEnumerable<int?>)list).Reverse().TakeWhile(x => !x.HasValue).Count();
+        return list.Take(list.Count - countLastNulls).ToArray();
     }
 }
