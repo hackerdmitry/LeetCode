@@ -19,11 +19,12 @@ public static class ParserExtensions
         var matches = Regex.Matches(line, @"(?<=\[)((\-?\d+,?)*)(?=\])");
         return matches
             .Select(x => x.Value.Trim())
-            .Select(x => x == string.Empty
-                ? Array.Empty<int>()
-                : x.Split(',')
-                    .Select(y => int.Parse(y.Trim()))
-                    .ToArray())
+            .Select(
+                x => x == string.Empty
+                    ? Array.Empty<int>()
+                    : x.Split(',')
+                        .Select(y => int.Parse(y.Trim()))
+                        .ToArray())
             .ToArray();
     }
 
@@ -31,11 +32,12 @@ public static class ParserExtensions
     {
         var matches = Regex.Matches(line, @"(?<=\[)((""[^""]*?"",?)+)(?=\])");
         return matches
-            .Select(x => x
-                .Value
-                .Split(',')
-                .Select(y => y.Trim().Trim('"'))
-                .ToArray())
+            .Select(
+                x => x
+                    .Value
+                    .Split(',')
+                    .Select(y => y.Trim().Trim('"'))
+                    .ToArray())
             .ToArray();
     }
 
@@ -43,11 +45,12 @@ public static class ParserExtensions
     {
         var matches = Regex.Matches(line, @"(?<=\[)(('[^']*?',?)+)(?=\])");
         return matches
-            .Select(x => x
-                .Value
-                .Split(',')
-                .Select(y => char.Parse(y.Trim().Trim('\'')))
-                .ToArray())
+            .Select(
+                x => x
+                    .Value
+                    .Split(',')
+                    .Select(y => char.Parse(y.Trim().Trim('\'')))
+                    .ToArray())
             .ToArray();
     }
 
@@ -84,7 +87,7 @@ public static class ParserExtensions
 
         return array
             .Split(',')
-            .Select(x => x.Trim(' ', '"'))
+            .Select(x => Regex.Match(x, @"^\s*""(.*)""\s*$").Groups[1].Value)
             .ToArray();
     }
 }
