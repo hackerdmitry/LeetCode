@@ -14,8 +14,20 @@ public class HtmlParser
         string GetExampleText(HtmlNode htmlNode)
         {
             return htmlNode.ParentNode.Name == "pre"
-                ? htmlNode.NextSibling.InnerText
+                ? ConcatNonStrongSiblings(htmlNode.NextSibling)
                 : htmlNode.ParentNode.LastChild.InnerText;
+        }
+
+        string ConcatNonStrongSiblings(HtmlNode htmlNode)
+        {
+            var result = htmlNode.InnerText;
+            while (htmlNode.NextSibling != null && htmlNode.NextSibling.Name != "strong")
+            {
+                htmlNode = htmlNode.NextSibling;
+                result += htmlNode.InnerText;
+            }
+
+            return result;
         }
 
         var inputExamples = doc.DocumentNode
