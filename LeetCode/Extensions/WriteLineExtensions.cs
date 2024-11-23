@@ -6,22 +6,22 @@ namespace LeetCode.Extensions;
 
 public static class WriteLineExtensions
 {
-    public static void WriteLine<T>(this IList<IList<T>> multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null)
+    public static void WriteLine<T>(this IList<IList<T>> multidimensionalArray, string prefix = null, string separator = ", ", Func<T, string> writeLineFunc = null)
     {
         Console.WriteLine(HandlePrefix(prefix));
         foreach (var array in multidimensionalArray)
-            array.WriteLine(writeLineFunc: writeLineFunc);
+            array.WriteLine(separator: separator, writeLineFunc: writeLineFunc);
     }
 
-    public static void WriteLine<T>(this T[][] multidimensionalArray, string prefix = null, Func<T, string> writeLineFunc = null) =>
-        ((IList<IList<T>>)multidimensionalArray).WriteLine(prefix, writeLineFunc);
+    public static void WriteLine<T>(this T[][] multidimensionalArray, string prefix = null, string separator = ", ", Func<T, string> writeLineFunc = null) =>
+        ((IList<IList<T>>) multidimensionalArray).WriteLine(prefix, separator, writeLineFunc);
 
-    public static void WriteLine<T>(this IList<T> array, string prefix = null, Func<T, string> writeLineFunc = null)
+    public static void WriteLine<T>(this IList<T> array, string prefix = null, string separator = ", ", Func<T, string> writeLineFunc = null)
     {
         var list = writeLineFunc != null
             ? array.Select(writeLineFunc).Select(ObjectifyNullOrEmpty)
             : array.Select(ObjectifyNullOrEmpty);
-        Console.WriteLine(HandlePrefix(prefix) + $"[{string.Join(", ", list)}]");
+        Console.WriteLine(HandlePrefix(prefix) + $"[{string.Join(separator, list)}]");
     }
 
     public static void WriteLine<T>(this T[,] matrixArray, string prefix = null, Func<T, string> writeLineFunc = null)
