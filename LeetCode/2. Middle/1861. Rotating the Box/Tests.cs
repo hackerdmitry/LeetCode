@@ -1,7 +1,5 @@
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
 using LeetCode.Extensions;
+using LeetCode.Helpers;
 using NUnit.Framework;
 
 namespace LeetCode._2._Middle._1861._Rotating_the_Box;
@@ -28,17 +26,9 @@ public class Tests
 
     [Timeout(1000)]
     [TestCase("BigTest1")]
-    public void BigTest(string folder)
+    public void BigTest(string folderName)
     {
-        var namespaceName = TestContext.CurrentContext.Test.ClassName!.Replace("LeetCode.", string.Empty);
-        var numbersMatch = Regex.Matches(namespaceName, "\\d+");
-        var difficultyFolderStartWith = Path.Combine(".", numbersMatch[0].Value);
-        var difficultyFolder = Directory.GetDirectories(".").First(x => x.StartsWith(difficultyFolderStartWith));
-        var taskFolderStartWith = Path.Combine(difficultyFolder, numbersMatch[1].Value);
-        var taskFolder = Directory.GetDirectories(difficultyFolder).First(x => x.StartsWith(taskFolderStartWith));
-
-        using var inputReader = new StreamReader(Path.Combine(taskFolder, folder, "input.txt"));
-        using var outputReader = new StreamReader(Path.Combine(taskFolder, folder, "output.txt"));
-        Test(inputReader.ReadToEnd().Trim(), outputReader.ReadToEnd().Trim());
+        var (input, output) = ReaderHelper.ReadInputOutputFile(folderName);
+        Test(input, output);
     }
 }
