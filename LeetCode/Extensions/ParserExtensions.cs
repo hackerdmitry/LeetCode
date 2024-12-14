@@ -11,6 +11,11 @@ public static class ParserExtensions
         return int.Parse(line);
     }
 
+    public static long ParseLong(this string line)
+    {
+        return long.Parse(line);
+    }
+
     public static int[][] ParseIntArray2d(this string line)
     {
         if (line == "[]")
