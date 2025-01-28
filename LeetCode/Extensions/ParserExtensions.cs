@@ -61,11 +61,11 @@ public static class ParserExtensions
 
     public static int[] ParseIntArray(this string line)
     {
-        if (line == "[]")
+        line = line.TrimStart('[').TrimEnd(']');
+        if (string.IsNullOrWhiteSpace(line))
             return Array.Empty<int>();
 
-        var array = line.TrimStart('[').TrimEnd(']');
-        return array
+        return line
             .Split(',')
             .Select(x => int.Parse(x.Trim()))
             .ToArray();
@@ -93,6 +93,18 @@ public static class ParserExtensions
         return array
             .Split(',')
             .Select(x => Regex.Match(x, @"^\s*""(.*)""\s*$").Groups[1].Value)
+            .ToArray();
+    }
+
+    public static bool[] ParseBoolArray(this string line)
+    {
+        line = line.TrimStart('[').TrimEnd(']');
+        if (string.IsNullOrWhiteSpace(line))
+            return Array.Empty<bool>();
+
+        return line
+            .Split(',')
+            .Select(x => bool.Parse(x.Trim()))
             .ToArray();
     }
 }

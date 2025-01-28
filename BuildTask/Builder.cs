@@ -21,6 +21,7 @@ public class Builder
     {
         ["string[]"] = name => $"{name}.ParseStringArray()",
         ["list<string>"] = name => $"{name}.ParseStringArray()",
+        ["list<bool>"] = name => $"{name}.ParseBoolArray()",
         ["string[][]"] = name => $"{name}.ParseStringArray2d()",
         ["list<list<string>>"] = name => $"{name}.ParseStringArray2d()",
         ["int[]"] = name => $"{name}.ParseIntArray()",
