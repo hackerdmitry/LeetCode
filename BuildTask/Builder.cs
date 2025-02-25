@@ -92,7 +92,7 @@ public class Builder
     private void AppendNamespaceLine(TextWriter fileWriter)
     {
         var nonEncodedNamespace = $"{FolderFactory.LeetCodeFolderName}.{FolderFactory.GetDifficultyDirectoryName(taskData.Difficulty)}.{taskData.Title}";
-        var namespaceWithLeadingDigits = Regex.Replace(nonEncodedNamespace, @"[ -\(\),]", "_");
+        var namespaceWithLeadingDigits = Regex.Replace(nonEncodedNamespace, @"[ \-\(\),]", "_");
         var encodedNamespace = Regex.Replace(namespaceWithLeadingDigits, @"(\.|^)(\d)", "$1_$2");
         fileWriter.WriteLine($"namespace {encodedNamespace};");
         fileWriter.WriteLine();

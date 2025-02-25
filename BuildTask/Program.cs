@@ -19,7 +19,7 @@ public static class Program
     public static async Task Main()
     {
         Console.Write("Input title slug: ");
-        var titleSlug = Console.ReadLine();
+        var titleSlug = Console.ReadLine()!.Trim();
         var taskData = new TaskData();
 
         var questionContent = await new QuestionContentRequest(titleSlug).GetResponse(graphQLClient);
