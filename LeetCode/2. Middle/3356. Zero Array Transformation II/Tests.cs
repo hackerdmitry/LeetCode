@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace LeetCode._2._Middle._3356._Zero_Array_Transformation_II;
 
+// ⭐
 [TestFixture(TestName = "3356. Zero Array Transformation II")]
 public class Tests
 {

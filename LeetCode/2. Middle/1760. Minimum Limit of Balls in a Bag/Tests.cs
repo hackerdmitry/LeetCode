@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace LeetCode._2._Middle._1760._Minimum_Limit_of_Balls_in_a_Bag;
 
+// ⭐
 [TestFixture(TestName = "1760. Minimum Limit of Balls in a Bag")]
 public class Tests
 {
