@@ -84,7 +84,7 @@ public static class ParserExtensions
             .ToArray();
     }
 
-    public static string[] ParseStringArray(this string line)
+    public static string[] ParseStringArray(this string line, char literalString = '"')
     {
         var array = line.TrimStart('[').TrimEnd(']');
         if (array == string.Empty)
@@ -92,7 +92,7 @@ public static class ParserExtensions
 
         return array
             .Split(',')
-            .Select(x => Regex.Match(x, @"^\s*""(.*)""\s*$").Groups[1].Value)
+            .Select(x => Regex.Match(x, @$"^\s*{literalString}(.*){literalString}\s*$").Groups[1].Value)
             .ToArray();
     }
 
