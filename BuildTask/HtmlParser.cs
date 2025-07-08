@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Text.RegularExpressions;
 using BuildTask.Enums;
 using HtmlAgilityPack;
 
@@ -57,7 +58,7 @@ public class HtmlParser
                 var taskDataParam = taskData.Params[j];
                 if (i == 0)
                     taskDataParam.Examples = new string[examplesCount];
-                taskDataParam.Examples[i] = HandleExample(inputExamples[i][j].Split(" = ")[1]);
+                taskDataParam.Examples[i] = HandleExample(Regex.Split(inputExamples[i][j], @"\s*=\s*")[1]);
             }
 
             if (i == 0)
