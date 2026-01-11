@@ -33,6 +33,11 @@ public class ListNode
     {
         return CreateFromArray(array);
     }
+
+    public override string ToString()
+    {
+        return val.ToString();
+    }
 }
 
 public static class LinkNodeExtensions
