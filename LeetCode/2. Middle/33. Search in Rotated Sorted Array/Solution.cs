@@ -4,65 +4,33 @@ public class Solution
 {
     public int Search(int[] nums, int target)
     {
-        var shift = FindShift(nums);
-        return BinarySearchWithRotatedArray(nums, shift, target);
+        return BinarySearch(nums, target, 0, nums.Length - 1) ?? -1;
     }
 
-    public int BinarySearchWithRotatedArray(int[] nums, int shift, int target)
+    private int? BinarySearch(int[] nums, int target, int left, int right)
     {
-        var n = nums.Length;
-        var separation = n - shift;
-        var l = 0;
-        var r = n;
+        if (left == right)
+            return TargetIndex(nums, left, target);
 
-        int GetNum(int index) =>
-            nums[GetIndex(index)];
+        if (left + 1 == right)
+            return TargetIndex(nums, left, target) ?? TargetIndex(nums, right, target);
 
-        int GetIndex(int index) =>
-            index >= separation
-                ? index - separation
-                : index + shift;
+        if (nums[left] == target)
+            return left;
 
-        if (GetNum(l) == target)
-            return GetIndex(l);
-        if (n == 1)
-            return -1;
-        if (GetNum(r) == target)
-            return GetIndex(r);
+        if (nums[right] == target)
+            return right;
 
-        while (true)
-        {
-            var m = (l + r) / 2;
-            if (GetNum(m) == target)
-                return GetIndex(m);
+        var middle = (right + left) / 2;
 
-            if (GetNum(m) < target)
-                l = m;
-            else
-                r = m;
+        if (nums[middle] == target)
+            return middle;
 
-            if (r - l == 1)
-                return -1;
-        }
+        return nums[left] < nums[middle]
+            ? nums[left] < target && target < nums[middle] ? BinarySearch(nums, target, left, middle - 1) : BinarySearch(nums, target, middle + 1, right)
+            : nums[middle] >= target || target >= nums[right] ? BinarySearch(nums, target, left, middle - 1) : BinarySearch(nums, target, middle + 1, right);
     }
 
-    public int FindShift(int[] nums)
-    {
-        var l = 0;
-        var r = nums.Length - 1;
-        if (nums[l] < nums[r] || l == r)
-            return 0;
-
-        while (true)
-        {
-            var m = (l + r) / 2;
-            if (l == m)
-                return r;
-
-            if (nums[m] > nums[l])
-                l = m;
-            else
-                r = m;
-        }
-    }
+    private int? TargetIndex(int[] nums, int index, int target) =>
+        nums[index] == target ? index : null;
 }
