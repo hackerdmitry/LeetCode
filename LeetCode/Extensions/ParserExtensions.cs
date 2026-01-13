@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -105,6 +106,18 @@ public static class ParserExtensions
         return line
             .Split(',')
             .Select(x => bool.Parse(x.Trim()))
+            .ToArray();
+    }
+
+    public static double[] ParseDoubleArray(this string line)
+    {
+        line = line.TrimStart('[').TrimEnd(']');
+        if (string.IsNullOrWhiteSpace(line))
+            return Array.Empty<double>();
+
+        return line
+            .Split(',')
+            .Select(x => double.Parse(x.Trim(), CultureInfo.InvariantCulture))
             .ToArray();
     }
 }
