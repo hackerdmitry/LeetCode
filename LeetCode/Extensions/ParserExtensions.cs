@@ -62,7 +62,7 @@ public static class ParserExtensions
 
     public static int[] ParseIntArray(this string line)
     {
-        line = line.TrimStart('[').TrimEnd(']');
+        line = line.Trim().TrimStart('[').TrimEnd(']');
         if (string.IsNullOrWhiteSpace(line))
             return Array.Empty<int>();
 
@@ -77,7 +77,7 @@ public static class ParserExtensions
         if (line == "[]")
             return Array.Empty<int?>();
 
-        var array = line.TrimStart('[').TrimEnd(']');
+        var array = line.Trim().TrimStart('[').TrimEnd(']');
         return array
             .Split(',')
             .Select(x => x.Trim())
@@ -87,7 +87,7 @@ public static class ParserExtensions
 
     public static string[] ParseStringArray(this string line, char literalString = '"')
     {
-        var array = line.TrimStart('[').TrimEnd(']');
+        var array = line.Trim().TrimStart('[').TrimEnd(']');
         if (array == string.Empty)
             return Array.Empty<string>();
 
@@ -99,7 +99,7 @@ public static class ParserExtensions
 
     public static bool[] ParseBoolArray(this string line)
     {
-        line = line.TrimStart('[').TrimEnd(']');
+        line = line.Trim().TrimStart('[').TrimEnd(']');
         if (string.IsNullOrWhiteSpace(line))
             return Array.Empty<bool>();
 
@@ -111,7 +111,7 @@ public static class ParserExtensions
 
     public static double[] ParseDoubleArray(this string line)
     {
-        line = line.TrimStart('[').TrimEnd(']');
+        line = line.Trim().TrimStart('[').TrimEnd(']');
         if (string.IsNullOrWhiteSpace(line))
             return Array.Empty<double>();
 
