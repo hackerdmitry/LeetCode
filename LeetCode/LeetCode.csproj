@@ -15,13 +15,4 @@
         <PackageReference Include="coverlet.collector" Version="3.0.2" />
     </ItemGroup>
 
-    <ItemGroup>
-        <Content Include="**\input.txt">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-        <Content Include="**\output.txt">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
-
 </Project>

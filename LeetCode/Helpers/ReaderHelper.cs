@@ -11,8 +11,13 @@ public class ReaderHelper
     {
         var namespaceName = TestContext.CurrentContext.Test.ClassName!.Replace("LeetCode.", string.Empty);
         var numbersMatch = Regex.Matches(namespaceName, "\\d+");
-        var difficultyFolderStartWith = Path.Combine(".", numbersMatch[0].Value);
-        var difficultyFolder = Directory.GetDirectories(".").First(x => x.StartsWith(difficultyFolderStartWith));
+
+        var leetCodePath = Directory.GetParent(".")!.FullName;
+        while (Path.GetFileName(leetCodePath) != "LeetCode")
+            leetCodePath = Directory.GetParent(leetCodePath)!.FullName;
+        var difficultyFolderStartWith = Path.Combine(leetCodePath, numbersMatch[0].Value);
+
+        var difficultyFolder = Directory.GetDirectories(leetCodePath).First(x => x.StartsWith(difficultyFolderStartWith));
         var taskFolderStartWith = Path.Combine(difficultyFolder, numbersMatch[1].Value);
         var taskFolder = Directory.GetDirectories(difficultyFolder).First(x => x.StartsWith(taskFolderStartWith));
 
