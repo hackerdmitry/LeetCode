@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LeetCode._3809._Best_Reachable_Tower;
+namespace LeetCode._2._Middle._3809._Best_Reachable_Tower;
 
 public class Solution
 {

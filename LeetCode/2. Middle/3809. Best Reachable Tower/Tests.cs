@@ -1,7 +1,7 @@
 ﻿using LeetCode.Extensions;
 using NUnit.Framework;
 
-namespace LeetCode._3809._Best_Reachable_Tower;
+namespace LeetCode._2._Middle._3809._Best_Reachable_Tower;
 
 [TestFixture(TestName = "3809. Best Reachable Tower")]
 public class Tests
